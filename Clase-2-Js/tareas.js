@@ -34,7 +34,7 @@ function devolverString(nuevaString) {
   return nuevaString;
 
 }
-devolverString(nuevaString)
+devolverString("Return");
 
 function suma(x, y) {
   // "x" e "y" son números
@@ -134,14 +134,14 @@ elevarAlCuadrado(5);
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return (num ** 3);
+  return Math.pow(num,3);
 }
 elevarAlCubo(2);
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return (num ** exponent);
+  return Math.pow(num,exponent);
 }
 elevar(2, 2);
 
