@@ -103,7 +103,7 @@ mayorQueCincuenta(52);
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x - y;
+  return x % y;
 }
 obtenerResto(10,5);
 
@@ -204,9 +204,9 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Nahuel" -> "Hola Nahuel!"
   // Tu código:
-  return ( "Como estas" + " " + nombre + "?");
+  return ( "Hola" + " " + nombre +"!");
 }
-obtenerSaludo("Miguel");
+obtenerSaludo("Nahuel");
 function deEuroAdolar(euro) {
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
@@ -243,18 +243,19 @@ function esVocal(letra) {
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if ( letra == 'a' || letra == 'A' ||
-       letra == 'e' || letra == 'E' ||
-       letra == 'i' || letra == 'I' ||
-       letra == 'o' || letra == 'O' ||
-       letra == 'a' || letra == 'U' ){
-        return ("Es vocal");
-       } else if  (letra.length > 1) {
-         return ("Dato incorrecto");
+  if (letra.length !== 1) {
+    return "Dato incorrecto"
   }
- 
+  else if (letra === "a" || letra ==="e" || letra ==="i" ||
+  letra === "o" || letra === "u") {
+    return "Es vocal";
+  }
+  else if(letra !== "a" || letra !=="e" || letra !=="i" ||
+  letra !== "o" || letra !== "u") {
+    return "Dato incorrecto";
+  }
 }
-esVocal("a");
+ esVocal("a");
   
 
 // --------------------------------
