@@ -13,12 +13,11 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad>18){
-    return "Allowed";
-  }else{
-    return "Not Allowed";
-  }
-  
+  if (edad <= 17){
+    return "Not allowed";
+  } else {
+    return "Allowed"
+  } 
 }
 mayoriaDeEdad(19);
 
@@ -96,10 +95,10 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero == 10 || numero==5){
-    return "true";
+  if (numero == 5 || numero==10){
+    return true;
   } else {
-    return "false";
+    return false;
 
   }
 }
@@ -110,9 +109,9 @@ function estaEnRango(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero < 50 && numero > 20){
-    return "true";
+    return true;
   } else {
-    return "false";
+    return false;
 
   }
 }
@@ -127,9 +126,9 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
  if (Number.isInteger(numero)){
-    return "true";
+    return true;
  } else {
-    return "false";
+    return false;
  }
 }
 esEntero(4);
@@ -139,19 +138,18 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
- 
+
+  if  (numero % 3 === 0 && numero % 5 === 0 ){
+     return "fizzbuzz";
+  }
   if (numero % 5 === 0){
     return "buzz";
   }
   if (numero % 3 === 0){
     return "fizz";
-  }
-  if  (numero % 3 === 0 && numero % 5 === 0 ){
-    return "fizzbuzz";
-  } else {
+  } else   {
     return numero;
   }
-
 }
 fizzBuzz(9);
 
@@ -164,17 +162,18 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   //Tu código:
   
-  if (num1< 0 ||num2 < 0 || num3 < 0){
+  if (num1 < 0 ||num2 < 0 || num3 < 0){
     return "Hay negativos";
+  }
+  if (num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
   }
   if (num1>num2 && num1>num3 && num1 > 0){
     return "Número 1 es mayor y positivo";
   } else if (num3 > num1 && num3 > num2){
      return num3 =num3 + 1;
-  } else if (num1 === 0 || num2 === 0 || num3 === 0){
-     return "Error";
   } else
-     return "false";
+     return false;
 }
 operadoresLogicos(10,6,4);
 
